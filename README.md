@@ -71,9 +71,9 @@ In the Lambda execution role, grant the following permissions:
     pip install langchain langchain-aws langchain-community
     ```
     
-    ##Step 2: Create the Lambda Layers
+2. Create the Lambda Layers
     
-    ####Layer 1: langchain Dependencies
+    Layer 1: langchain Dependencies
     
     Create the directory structure:
     ```
@@ -132,16 +132,16 @@ In the Lambda execution role, grant the following permissions:
 
 3. Upload Layers to AWS Lambda
 
-    1) Go to the AWS Lambda Console.
-    2) Navigate to the Layers section.
-    3) Create a new layer for each zip file:
+    * Go to the AWS Lambda Console.
+    * Navigate to the Layers section.
+    * Create a new layer for each zip file:
         * Upload langchain-layer.zip.
         * Upload langchain-aws-layer.zip.
         * Upload langchain-community-layer.zip. (not used for now so you can skip)
     
     Step 5: Attach Layers to Your Lambda Function
-    1) Navigate to your Lambda function.
-    2) In the Function configuration, add the layers:
+    * Navigate to your Lambda function.
+    * In the Function configuration, add the layers:
         * Add langchain-layer.
         * Add langchain-community-layer.
         * Add langchain-aws-layer. (not used for now so you can skip)
