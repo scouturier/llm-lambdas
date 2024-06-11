@@ -1,3 +1,7 @@
+<span style="color:red">
+This is a test repository, use at your own risks
+</span>
+
 ## Required Lambda parameters
 * aws_region
 * kendra_index_id
@@ -5,14 +9,14 @@
 * prompt
 * question
 
-## Increase Lambda Timeout
+#### Increase Lambda Timeout
 1) Navigate to configuaration
 2) Click on General Configuration
 3) Click on Edit
 4) Increase the value. 10s seems to work but to be tested
 
 
-## Give Lambda permissions
+#### Give Lambda permissions
 
 In the lambda execution role **FOR TESTING PURPOSES ONLY, THIS SHOULD BE RESTRICTED TO MINIMUM**
 * AmazonBedrockFullAccess
@@ -47,7 +51,7 @@ In the lambda execution role **FOR TESTING PURPOSES ONLY, THIS SHOULD BE RESTRIC
 ```
 3) Add an environment variable key ***KENDRA_ROLE_ARN*** with the destination role ARN as value
 
-## Create lambda layers
+#### Create lambda layers
 
 Step 1: Set Up Your Environment
 Create a virtual environment:
@@ -134,5 +138,5 @@ Step 5: Attach Layers to Your Lambda Function
 1) Navigate to your Lambda function.
 2) In the Function configuration, add the layers:
     * Add langchain-layer.
-    * Add langchain-aws-layer.
     * Add langchain-community-layer.
+    * Add langchain-aws-layer. (not used for now so you can skip)
